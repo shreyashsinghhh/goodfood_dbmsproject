@@ -1,0 +1,40 @@
+mysql> CREATE TABLE `Users` (
+    ->   `User_ID` INT NOT NULL AUTO_INCREMENT,
+    ->   `Username` VARCHAR(50) NOT NULL,
+    ->   `Password` VARCHAR(50) NOT NULL,
+    ->   `Email` VARCHAR(50) NOT NULL,
+    ->   PRIMARY KEY (`User_ID`)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> INSERT INTO Users (Username, Password, Email)
+    -> VALUES
+    ->   ('user1', 'password1', 'user1@example.com'),
+    ->   ('user2', 'password2', 'user2@example.com'),
+    ->   ('user3', 'password3', 'user3@example.com'),
+    ->   ('user4', 'password4', 'user4@example.com'),
+    ->   ('user5', 'password5', 'user5@example.com'),
+    ->   ('user6', 'password6', 'user6@example.com'),
+    ->   ('user7', 'password7', 'user7@example.com'),
+    ->   ('user8', 'password8', 'user8@example.com'),
+    ->   ('user9', 'password9', 'user9@example.com'),
+    ->   ('user10', 'password10', 'user10@example.com');
+Query OK, 10 rows affected (0.03 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select * from users;
++---------+----------+------------+--------------------+
+| User_ID | Username | Password   | Email              |
++---------+----------+------------+--------------------+
+|       1 | user1    | password1  | user1@example.com  |
+|       2 | user2    | password2  | user2@example.com  |
+|       3 | user3    | password3  | user3@example.com  |
+|       4 | user4    | password4  | user4@example.com  |
+|       5 | user5    | password5  | user5@example.com  |
+|       6 | user6    | password6  | user6@example.com  |
+|       7 | user7    | password7  | user7@example.com  |
+|       8 | user8    | password8  | user8@example.com  |
+|       9 | user9    | password9  | user9@example.com  |
+|      10 | user10   | password10 | user10@example.com |
++---------+----------+------------+--------------------+
+10 rows in set (0.00 sec)

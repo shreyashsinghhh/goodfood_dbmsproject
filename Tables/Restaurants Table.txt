@@ -1,0 +1,38 @@
+mysql> CREATE TABLE `Restaurants` (
+    ->   `Restaurant_ID` INT NOT NULL AUTO_INCREMENT,
+    ->   `Restaurant_Name` VARCHAR(50) NOT NULL,
+    ->   `Address` VARCHAR(100) NOT NULL,
+    ->   `Phone_Number` VARCHAR(20) NOT NULL,
+    ->   `Owner_ID` INT NOT NULL,
+    ->   PRIMARY KEY (`Restaurant_ID`),
+    ->   FOREIGN KEY (`Owner_ID`) REFERENCES `Restaurant_Owners`(`Owner_ID`)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> INSERT INTO `Restaurants` (`Restaurant_Name`, `Address`, `Phone_Number`, `Owner_ID`)
+    -> VALUES
+    -> ('Restaraunt A', '101 First St', '555-1111', 1),
+    -> ('Restaraunt B', '202 Second St', '555-2222', 2),
+    -> ('Restaraunt C', '303 Third St', '555-3333', 3),
+    -> ('Restaraunt D', '404 Fourth St', '555-4444', 4),
+    -> ('Restaraunt E', '505 Fifth St', '555-5555', 5),
+    -> ('Restaraunt F', '606 Sixth St', '555-6666', 6),
+    -> ('Restaraunt G', '707 Seventh St', '555-7777', 7),
+    -> ('Restaraunt H', '808 Eighth St', '555-8888', 8);
+Query OK, 8 rows affected (0.03 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+mysql> select * from restaurants;
++---------------+-----------------+----------------+--------------+----------+
+| Restaurant_ID | Restaurant_Name | Address        | Phone_Number | Owner_ID |
++---------------+-----------------+----------------+--------------+----------+
+|             1 | Restaraunt A    | 101 First St   | 555-1111     |        1 |
+|             2 | Restaraunt B    | 202 Second St  | 555-2222     |        2 |
+|             3 | Restaraunt C    | 303 Third St   | 555-3333     |        3 |
+|             4 | Restaraunt D    | 404 Fourth St  | 555-4444     |        4 |
+|             5 | Restaraunt E    | 505 Fifth St   | 555-5555     |        5 |
+|             6 | Restaraunt F    | 606 Sixth St   | 555-6666     |        6 |
+|             7 | Restaurant G    | 707 Seventh St | 555-7777     |        7 |
+|             8 | Restaraunt H    | 808 Eighth St  | 555-8888     |        8 |
++---------------+-----------------+----------------+--------------+----------+
+8 rows in set (0.00 sec)

@@ -1,0 +1,38 @@
+mysql> CREATE TABLE `Cuisines` (
+    ->   `Cuisine_ID` INT NOT NULL AUTO_INCREMENT,
+    ->   `Cuisine_Name` VARCHAR(50) NOT NULL,
+    ->   PRIMARY KEY (`Cuisine_ID`)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> INSERT INTO Cuisines (Cuisine_Name)
+    -> VALUES
+    -> ('Mexican'),
+    -> ('Italian'),
+    -> ('Japanese'),
+    -> ('Chinese'),
+    -> ('Indian'),
+    -> ('Thai'),
+    -> ('Greek'),
+    -> ('Mediterranean'),
+    -> ('French'),
+    -> ('Vietnamese');
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select * from cuisines;
++------------+---------------+
+| Cuisine_ID | Cuisine_Name  |
++------------+---------------+
+|          1 | Mexican       |
+|          2 | Italian       |
+|          3 | Japanese      |
+|          4 | Chinese       |
+|          5 | Indian        |
+|          6 | Thai          |
+|          7 | Greek         |
+|          8 | Mediterranean |
+|          9 | French        |
+|         10 | Vietnamese    |
++------------+---------------+
+10 rows in set (0.00 sec)

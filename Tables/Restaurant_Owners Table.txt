@@ -1,0 +1,40 @@
+mysql> CREATE TABLE `Restaurant_Owners` (
+    ->   `Owner_ID` INT NOT NULL AUTO_INCREMENT,
+    ->   `Owner_Name` VARCHAR(50) NOT NULL,
+    ->   `Owner_Email` VARCHAR(50) NOT NULL,
+    ->   `Owner_Password` VARCHAR(50) NOT NULL,
+    ->   PRIMARY KEY (`Owner_ID`)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> INSERT INTO `Restaurant_Owners` (`Owner_Name`, `Owner_Email`, `Owner_Password`)
+    -> VALUES
+    ->   ('owner1', 'owner1@gmail.com', 'password1'),
+    ->   ('owner2', 'owner2@gmail.com', 'password2'),
+    ->   ('owner3', 'owner3@gmail.com', 'password3'),
+    ->   ('owner4', 'owner4@gmail.com', 'password4'),
+    ->   ('owner5', 'owner5@gmail.com', 'password5'),
+    ->   ('owner6', 'owner6@gmail.com', 'password6'),
+    ->   ('owner7', 'owner7@gmail.com', 'password7'),
+    ->   ('owner8', 'owner8@gmail.com', 'password8'),
+    ->   ('owner9', 'owner9@gmail.com', 'password9'),
+    ->   ('owner10', 'owner10@gmail.com', 'password10');
+Query OK, 10 rows affected (0.03 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select * from restaurant_owners;
++----------+------------+-------------------+----------------+
+| Owner_ID | Owner_Name | Owner_Email       | Owner_Password |
++----------+------------+-------------------+----------------+
+|        1 | owner1     | owner1@gmail.com  | password1      |
+|        2 | owner2     | owner2@gmail.com  | password2      |
+|        3 | owner3     | owner3@gmail.com  | password3      |
+|        4 | owner4     | owner4@gmail.com  | password4      |
+|        5 | owner5     | owner5@gmail.com  | password5      |
+|        6 | owner6     | owner6@gmail.com  | password6      |
+|        7 | owner7     | owner7@gmail.com  | password7      |
+|        8 | owner8     | owner8@gmail.com  | password8      |
+|        9 | owner9     | owner9@gmail.com  | password9      |
+|       10 | owner10    | owner10@gmail.com | password10     |
++----------+------------+-------------------+----------------+
+10 rows in set (0.00 sec)
